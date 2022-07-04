@@ -190,7 +190,7 @@ us_time = compare_rates(us_data, ctime, ftime, 'Month (US)')
 # run the stats by people
 # number of vaccinated people
 cpeople = .25996
-fpeople = .30000  # fake
+fpeople = .388 
 us_people = compare_rates(us_data, cpeople, fpeople, 'People (US)')
 
 with open('table1.md', 'w') as md:
@@ -224,7 +224,7 @@ global_time = compare_rates(global_data, ctime, ftime, 'Month (Global)')
 # run the stats by people
 # number of vaccinated people
 cpeople = 5.23
-fpeople = 6.00  # fake
+fpeople = 9.23  # fake
 global_people = compare_rates(global_data, cpeople, fpeople, 'People (Global)')
 
 with open('table2.md', 'w') as md:
