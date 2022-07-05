@@ -15,7 +15,7 @@ from zepid.graphics import EffectMeasurePlot
 # pip install sigfig
 from sigfig import round
 
-#turns off warnings that arise with the sigfig formatting routine
+# turns off warnings that arise with the sigfig formatting routine
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -184,13 +184,13 @@ us_dose = compare_rates(us_data, cdose, fdose, 'Dose (US)')
 # run the stats by month
 # amount of time COVID and flu have been tracked in VAERS
 ctime = 18
-ftime = 281
+ftime = 294
 us_time = compare_rates(us_data, ctime, ftime, 'Month (US)')
 
 # run the stats by people
 # number of vaccinated people
 cpeople = .25996
-fpeople = .388 
+fpeople = .38861  # estimated
 us_people = compare_rates(us_data, cpeople, fpeople, 'People (US)')
 
 with open('table1.md', 'w') as md:
@@ -212,19 +212,19 @@ with open('table1.md', 'w') as md:
 # run the stats by dose
 # number of doses of COVID and flu vaccine
 cdose = 12.07
-fdose = 66
+fdose = 66  # estimated
 global_dose = compare_rates(global_data, cdose, fdose, 'Dose (Global)')
 
 # run the stats by month
 # amount of time COVID and flu have been tracked in VAERS
 ctime = 18
-ftime = 281
+ftime = 294
 global_time = compare_rates(global_data, ctime, ftime, 'Month (Global)')
 
 # run the stats by people
 # number of vaccinated people
 cpeople = 5.23
-fpeople = 9.23  # fake
+fpeople = 9.23  # estimated
 global_people = compare_rates(global_data, cpeople, fpeople, 'People (Global)')
 
 with open('table2.md', 'w') as md:
