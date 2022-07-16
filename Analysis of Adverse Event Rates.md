@@ -11,9 +11,9 @@ In Table 0 below, we report the period used for normalizing the data, Global val
 
 *Table 0*
 
-Counting the number of people vaccinated with the COVID-19 vaccine is straightforward because there has only been one worldwide attempt at vaccination and the data has been tracked from day one. The Flu vaccine is harder because individuals are not tracked and there are yearly seasons where an individual may choose to receive a subsequent vaccinations. We run a Monte Carlo simulation to estimate the number of people since 1998 that have received at least one Flu vaccine in the US. 
+Counting the number of people vaccinated with the COVID-19 vaccine is straightforward because there has only been one worldwide attempt at vaccination and the data has been tracked from day one. The Flu vaccine is harder because individuals are not tracked and there are yearly seasons where an individual may choose to receive a subsequent vaccinations. We run a Monte Carlo simulation to estimate the number of people that have received at least one Flu vaccine in the US since 1998. 
 
-We track a sample population where each year a fraction of the population is vaccinated, $f_{v}$, a fraction of the population dies (some of whom may be vaccinated), $f_d$, and a new fraction of the population is born (none of whom are vaccinated), $f_b$. By simulating the demographics change yearly, we can estimate the total number of people who have received at least one flu vaccine by 2022. We use the UN population data to estimate $f_b$ and $f_d$ each year (reference: https://population.un.org/) and the conditional probability of Flu vaccination from Kwong, et al. (reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6961264/). Kwong reports that roughly 57% (33,234 out of 58,021) of the population in their study who receives a flu shot in one year repeats it a subsequent year. The CDC reports that approximately 50% of the population receives the vaccine in any given year. From that, we estimate $f_v=0.57$ for previously vaccinated individuals and $f_v=0.43$ for previously unvaccinated individuals, which will result in the rough CDC approximation of 50% of the population being vaccinated any given year. 
+We track a sample population where each year a fraction of the population is vaccinated, $f_{v}$, a fraction of the population dies (some of whom may be vaccinated), $f_d$, and a new fraction of the population is born (none of whom are vaccinated), $f_b$. By simulating the demographics change yearly, we can estimate the total number of people who have received at least one flu vaccine by 2022. We use the UN population data to estimate $f_b$ and $f_d$ each year (reference: https://population.un.org/) and the conditional probability of Flu vaccination from Kwong, et al. (reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6961264/). Kwong reports that roughly 57% (33,234 out of 58,021) of the population in their study who receives a flu shot in one year repeats it a subsequent year. The CDC reports that approximately 50% of the population receives the vaccine in any given year. From that, we approximate $f_v=0.57$ for previously vaccinated individuals and $f_v=0.43$ for previously unvaccinated individuals, which will result in the rough CDC approximation of 50% of the population being vaccinated any given year. 
 
 To allow simulation “burn in” for the stochastic nature of this experiment, we start in 1980 with a sample of the US population of 100,000,000 people with 50% of them "pre-vaccinated" from previous years. From 1980 to 1997 we grow the population by $f_b$, shrink it by $f_d$, and vaccinate individuals by the conditional $f_v$ based on their current vaccination status, by 1997 we can see that the fraction of vaccinated population has stabalized. We continue the simulation until 2021 with the addition that in 1998 we start accumulating the number of people who were vaccinated and died. The results of that simulation are shown below in Table 00.
 
@@ -66,6 +66,8 @@ To allow simulation “burn in” for the stochastic nature of this experiment, 
 
 After running the simulation, in 2021 our sample population grew to 125,981,000, with a total of 146,200,000 (current vaccinated living plus the accumulated vaccinated dead) receiving at least one dose of the Flu vaccine since 1998 (116% of the current population). Now, we scale this estimate to the true 2022 the total population of 334,805,000 (reference: https://population.un.org/), we estimate the same fraction of 116% of the current poplulation vaccinated since 1998, that results in roughly a total 389 million people in the US that have received at least one dose of flu vaccine. Using the same scaling factor for a world population of 7.95 billion, we get an estimate of 9.23 billion people worldwide who have received at least one dose of the flu vaccine since 1998. These are all rough estimates given the limited data available; however, even if these estimates are high by a factor of 10 (highly unlikely), the signals reported below are still significant. 
 
+Kwong, et al. track the number of vaccine doses a population of 38,766 people had over a 10-year period (Table 4 in their paper). A weighted average of the number of doses given per peson over that 10-year period is 0.62 doses/person/year. Our estimates of 9.23 billion people receiving 66 billion doses globally (0.30 doses/person/year) and 389 million people receiving 3.3 billion doses in the US (0.35 doses/person/year) provide more evidence that our estimates are not wildly inconsistent with existing studies. Kwong, et al. are specifically studying people in the 65+ age category, which has roughtly double the uptake of the general population (reference:https://www.cdc.gov/flu/fluvaxview/coverage-1819estimates.htm), consistent with our estimates.
+
 In Table 1 below we show the count of AE reported post vaccine in VAERS along with the mean rate of report over the time tracked, the mean rate of report per billion doses given, and the mean rate of report per billion people vaccinated. Report count and rates for the COVID-19 Vaccine are on the top line with the counts and rates for the Flu vaccine below them for each AE. The same data for global counts and rates is shown in Table 2.
 
 | Adverse Event | US Count of AE reports post Vaccine | US Rate of reported AE<br/>(count/Month) | US Rate of reported AE<br/>(count/billion doses) | US Rate of reported AE<br/>(count/billion people vaccinated) |
@@ -83,6 +85,7 @@ In Table 1 below we show the count of AE reported post vaccine in VAERS along wi
 | Fetal abnormal surveillance | 125<br/>36 | 6.94<br/>0.122 | 210<br/>10.9 | 481<br/>92.6 |
 | Fetal placental thrombosis | 5<br/>0 | 0.278<br/>0.00 | 8.39<br/>0.00 | 19.2<br/>0.00 |
 | Fetal death (stillbirth) | 168<br/>42 | 9.33<br/>0.143 | 282<br/>12.7 | 646<br/>108 |
+
 
 *Table 1*
 
@@ -143,7 +146,7 @@ We report in Table 3 below the relative rate of post COVID-19 vaccine AE reports
 | Abnormal uterine bleeding (menstrual irregularity) | 4257 [1589.1-12893] p=0.0 <br/>2524 [894.57-6419.0] p=0.0| 1192 [673.95-2162.8] p=0.0<br/>738 [391.6-1584] p=0.0| 359 [261.1-506.8] p=0.0<br/>181 [131.2-255.5] p=0.0|
 | Miscarriage | 177 [114.4-283.5] p=0.0 <br/>83 [50.8-143] p=0.0| 57 [44.3-74.7] p=0.0<br/>27 [20.2-36.5] p=0.0| 18 [15.7-21.2] p=0.0<br/>7 [6.1-8.4] p=0.0|
 | Fetal chromosomal abnormalities |  p=0.00058 <br/> p=0.0048|  p=0.00058<br/> p=0.0048|  p=0.00058<br/> p=0.0048|
-| Fetal malformation | 21 [10.0-32.0] p=1.9x10^-07^ <br/> p=0.20| 20 [7.67-31.0] p=1.9x10^-07^<br/> p=0.20| 16 [5.00-30.0] p=2.1x10^-06^<br/> p=0.20|
+| Fetal malformation | 21 [10.0-32.0] p=1.9x10^-07^ <br/>2 [0.0-5.0] p=0.20| 20 [7.67-31.0] p=1.9x10^-07^<br/>2 [0.0-5.0] p=0.20| 16 [5.00-30.0] p=2.1x10^-06^<br/>2 [0.0-5.0] p=0.20|
 | Fetal cystic hygroma |  p=0.0024 <br/> p=0.020|  p=0.0024<br/> p=0.020|  p=0.0024<br/> p=0.020|
 | Fetal cardiac disorders | 17 [8.00-27.0] p=2.6x10^-06^ <br/>10 [4.00-17.0] p=0.00058| 16 [6.00-26.0] p=2.6x10^-06^<br/>9 [3.0-16] p=0.00058| 13 [4.00-25.0] p=2.7x10^-05^<br/>7 [1.7-15] p=0.0047|
 | Fetal arrhythmia |  p=0.020 <br/> p=0.088|  p=0.020<br/> p=0.088|  p=0.020<br/> p=0.088|
@@ -170,7 +173,13 @@ In the Figures below we show the Global and US relative rates of the reports of 
 
 ![forest-People (US)](forest-People%20(US).png)
 
-## Log
+## Scripts
+
+Private for the authors only:  I have a git hub repository here and if you’re comfortable with git hub I will give you permission to clone the repo and check out what I did.
+
+https://github.com/mikedeskevich/fetal-ae
+
+## Logs
 
 Output log from analysis code
 
@@ -504,6 +513,58 @@ Fetal abnormal surveillance                                 7.2770     4.7895   
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
 Fetal death (stillbirth)                                   11.4116     8.1364    16.2917
 ******************************
+```
+
+Output log from the flu vaccine population simulation
+
+```
+|End of Year|Sample Population<br/>(Thousands)|Vaccinated Population<br/>(Thousands)|Total Vaccinated<br/>Since 1998<br/>(Thousands)|
+|---| --: | --: | --: |
+| 1980 | 100685 | 70921 (70.4%) | -- |
+| 1981 | 101328 | 82921 (81.8%) | -- |
+| 1982 | 101936 | 89923 (88.2%) | -- |
+| 1983 | 102629 | 94190 (91.8%) | -- |
+| 1984 | 103253 | 96842 (93.8%) | -- |
+| 1985 | 103924 | 98746 (95.0%) | -- |
+| 1986 | 104615 | 100133 (95.7%) | -- |
+| 1987 | 105344 | 101170 (96.0%) | -- |
+| 1988 | 106017 | 102026 (96.2%) | -- |
+| 1989 | 106742 | 102790 (96.3%) | -- |
+| 1990 | 107434 | 103590 (96.4%) | -- |
+| 1991 | 108187 | 104335 (96.4%) | -- |
+| 1992 | 108919 | 105104 (96.5%) | -- |
+| 1993 | 109637 | 105790 (96.5%) | -- |
+| 1994 | 110313 | 106507 (96.5%) | -- |
+| 1995 | 110959 | 107191 (96.6%) | -- |
+| 1996 | 111615 | 107893 (96.7%) | -- |
+| 1997 | 112289 | 108579 (96.7%) | -- |
+| 1998 | 112919 | 109203 (96.7%) | 110157 (97.6%) |
+| 1999 | 113542 | 109799 (96.7%) | 111722 (98.4%) |
+| 2000 | 114182 | 110390 (96.7%) | 113264 (99.2%) |
+| 2001 | 114821 | 111055 (96.7%) | 114889 (100.1%) |
+| 2002 | 115497 | 111745 (96.8%) | 116497 (100.9%) |
+| 2003 | 116175 | 112461 (96.8%) | 118139 (101.7%) |
+| 2004 | 116819 | 113102 (96.8%) | 119745 (102.5%) |
+| 2005 | 117465 | 113757 (96.8%) | 121371 (103.3%) |
+| 2006 | 118119 | 114412 (96.9%) | 122989 (104.1%) |
+| 2007 | 118792 | 114997 (96.8%) | 124521 (104.8%) |
+| 2008 | 119496 | 115736 (96.9%) | 126181 (105.6%) |
+| 2009 | 120074 | 116317 (96.9%) | 127789 (106.4%) |
+| 2010 | 120665 | 116899 (96.9%) | 129362 (107.2%) |
+| 2011 | 121265 | 117562 (96.9%) | 130979 (108.0%) |
+| 2012 | 121819 | 118175 (97.0%) | 132571 (108.8%) |
+| 2013 | 122308 | 118774 (97.1%) | 134195 (109.7%) |
+| 2014 | 122830 | 119335 (97.2%) | 135733 (110.5%) |
+| 2015 | 123360 | 119866 (97.2%) | 137231 (111.2%) |
+| 2016 | 123855 | 120378 (97.2%) | 138736 (112.0%) |
+| 2017 | 124287 | 120819 (97.2%) | 140225 (112.8%) |
+| 2018 | 124730 | 121263 (97.2%) | 141695 (113.6%) |
+| 2019 | 125123 | 121666 (97.2%) | 143178 (114.4%) |
+| 2020 | 125570 | 122107 (97.2%) | 144657 (115.2%) |
+| 2021 | 125981 | 122575 (97.3%) | 146200 (116.0%) |
+
+US total Flu vaccine since 1998 = 388538000
+Global total Flu vaccine since 1998 = 9230502000
 ```
 
 ## Extra
