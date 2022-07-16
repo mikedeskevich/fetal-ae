@@ -11,13 +11,62 @@ In Table 0 below, we report the period used for normalizing the data, Global val
 
 *Table 0*
 
-Counting the number of people vaccinated with the COVID-19 vaccine is straightforward because there has only been one worldwide attempt at vaccination and the data has been tracked from day one.  The Flu vaccine is harder because individuals are not tracked and there are yearly seasons where an individual may receive a subsequent vaccination each season. We run a Monte Carlo simulation to estimate the number of people since 1998 that have received at least one Flu vaccine in the US.  
+Counting the number of people vaccinated with the COVID-19 vaccine is straightforward because there has only been one worldwide attempt at vaccination and the data has been tracked from day one. The Flu vaccine is harder because individuals are not tracked and there are yearly seasons where an individual may choose to receive a subsequent vaccinations. We run a Monte Carlo simulation to estimate the number of people since 1998 that have received at least one Flu vaccine in the US. 
 
-To allow simulation “burn in” for the stochastic nature of this experiment, we start in 1980 with a US population of 229,486,000 (reference: https://population.un.org/), each year a fraction of the total population is vaccinated ($f_{v}$), a fraction of the total population dies ($f_d)$, and a new fraction of the population is born ($f_b$). By simulating the demographics change yearly, we can estimate the total number of people who have received at least one flu vaccine by 2022.  We use the UN population data to estimate $f_b$ and $f_d$ each year (reference: https://population.un.org/) and the conditional probability of Flu vaccination from Kwong, et al. (reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6961264/). Kwong reports that roughly 57% of the population in their study who receives a flu shot in one year repeats it a subsequet (33,234 out of 58,021) year. The CDC reports that approximately 50% of the population is vaccinated in any given year. We estimate $f_v=0.57$ for previously vaccinated individuals and $f_v=0.43$ for previously unvaccinated individuals, which will return the rough CDC approximation of 50% of the population being vaccinated any given year. 
+We track a sample population where each year a fraction of the population is vaccinated, $f_{v}$, a fraction of the population dies (some of whom may be vaccinated), $f_d$, and a new fraction of the population is born (none of whom are vaccinated), $f_b$. By simulating the demographics change yearly, we can estimate the total number of people who have received at least one flu vaccine by 2022. We use the UN population data to estimate $f_b$ and $f_d$ each year (reference: https://population.un.org/) and the conditional probability of Flu vaccination from Kwong, et al. (reference: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6961264/). Kwong reports that roughly 57% (33,234 out of 58,021) of the population in their study who receives a flu shot in one year repeats it a subsequent year. The CDC reports that approximately 50% of the population receives the vaccine in any given year. From that, we estimate $f_v=0.57$ for previously vaccinated individuals and $f_v=0.43$ for previously unvaccinated individuals, which will result in the rough CDC approximation of 50% of the population being vaccinated any given year. 
 
-After running the simulation, the final tally for 2022 is a total US population of 289,107,000, with a total of 335,572,000 (116% of the current population) receiving at least one dose of the Flu vaccine since 1998. Our model does not account for migration into the US, and in 2022 the total population is 334,805,000, if we estimate the same fraction of 116% vaccinated since 1998, that results in roughly 388 million people in the US that have received at least one dose of flu vaccine.  Using the same scaling factor for a world population of 7.95 billion, we get an estimate of 9.23 billion people worldwide who have received at least one dose of the flu vaccine since 1998.  These are all rough estimates given the limited data available; however, even if these estimates are high by a factor of 2 (unlikely), the signals reported below are still significant. 
+To allow simulation “burn in” for the stochastic nature of this experiment, we start in 1980 with a sample of the US population of 100,000,000 people with 50% of them "pre-vaccinated" from previous years. From 1980 to 1997 we grow the population by $f_b$, shrink it by $f_d$, and vaccinate individuals by the conditional $f_v$ based on their current vaccination status, by 1997 we can see that the fraction of vaccinated population has stabalized. We continue the simulation until 2021 with the addition that in 1998 we start accumulating the number of people who were vaccinated and died. The results of that simulation are shown below in Table 00.
 
-Table 1 below shows the count of AE reported post vaccine in VAERS along with the mean rate of report over the time tracked, the mean rate of report per billion doses given, and the mean rate of report per billion people vaccinated. Report count and rates for the COVID-19 Vaccine are on the top line with the counts and rates for the Flu vaccine below them for each AE.  The same data for global counts and rates is shown in Table 2.
+|End of Year|Sample Population<br/>(Thousands)|Vaccinated Population<br/>(Thousands)|Total Vaccinated<br/>Since 1998<br/>(Thousands)|
+|---| --: | --: | --: |
+| 1980 | 100685 | 70921 (70.4%) | -- |
+| 1981 | 101328 | 82921 (81.8%) | -- |
+| 1982 | 101936 | 89923 (88.2%) | -- |
+| 1983 | 102629 | 94190 (91.8%) | -- |
+| 1984 | 103253 | 96842 (93.8%) | -- |
+| 1985 | 103924 | 98746 (95.0%) | -- |
+| 1986 | 104615 | 100133 (95.7%) | -- |
+| 1987 | 105344 | 101170 (96.0%) | -- |
+| 1988 | 106017 | 102026 (96.2%) | -- |
+| 1989 | 106742 | 102790 (96.3%) | -- |
+| 1990 | 107434 | 103590 (96.4%) | -- |
+| 1991 | 108187 | 104335 (96.4%) | -- |
+| 1992 | 108919 | 105104 (96.5%) | -- |
+| 1993 | 109637 | 105790 (96.5%) | -- |
+| 1994 | 110313 | 106507 (96.5%) | -- |
+| 1995 | 110959 | 107191 (96.6%) | -- |
+| 1996 | 111615 | 107893 (96.7%) | -- |
+| 1997 | 112289 | 108579 (96.7%) | -- |
+| 1998 | 112919 | 109203 (96.7%) | 110157 (97.6%) |
+| 1999 | 113542 | 109799 (96.7%) | 111722 (98.4%) |
+| 2000 | 114182 | 110390 (96.7%) | 113264 (99.2%) |
+| 2001 | 114821 | 111055 (96.7%) | 114889 (100.1%) |
+| 2002 | 115497 | 111745 (96.8%) | 116497 (100.9%) |
+| 2003 | 116175 | 112461 (96.8%) | 118139 (101.7%) |
+| 2004 | 116819 | 113102 (96.8%) | 119745 (102.5%) |
+| 2005 | 117465 | 113757 (96.8%) | 121371 (103.3%) |
+| 2006 | 118119 | 114412 (96.9%) | 122989 (104.1%) |
+| 2007 | 118792 | 114997 (96.8%) | 124521 (104.8%) |
+| 2008 | 119496 | 115736 (96.9%) | 126181 (105.6%) |
+| 2009 | 120074 | 116317 (96.9%) | 127789 (106.4%) |
+| 2010 | 120665 | 116899 (96.9%) | 129362 (107.2%) |
+| 2011 | 121265 | 117562 (96.9%) | 130979 (108.0%) |
+| 2012 | 121819 | 118175 (97.0%) | 132571 (108.8%) |
+| 2013 | 122308 | 118774 (97.1%) | 134195 (109.7%) |
+| 2014 | 122830 | 119335 (97.2%) | 135733 (110.5%) |
+| 2015 | 123360 | 119866 (97.2%) | 137231 (111.2%) |
+| 2016 | 123855 | 120378 (97.2%) | 138736 (112.0%) |
+| 2017 | 124287 | 120819 (97.2%) | 140225 (112.8%) |
+| 2018 | 124730 | 121263 (97.2%) | 141695 (113.6%) |
+| 2019 | 125123 | 121666 (97.2%) | 143178 (114.4%) |
+| 2020 | 125570 | 122107 (97.2%) | 144657 (115.2%) |
+| 2021 | 125981 | 122575 (97.3%) | 146200 (116.0%) |
+
+*Table 00*
+
+After running the simulation, in 2021 our sample population grew to 125,981,000, with a total of 146,200,000 (current vaccinated living plus the accumulated vaccinated dead) receiving at least one dose of the Flu vaccine since 1998 (116% of the current population). Now, we scale this estimate to the true 2022 the total population of 334,805,000 (reference: https://population.un.org/), we estimate the same fraction of 116% of the current poplulation vaccinated since 1998, that results in roughly a total 389 million people in the US that have received at least one dose of flu vaccine. Using the same scaling factor for a world population of 7.95 billion, we get an estimate of 9.23 billion people worldwide who have received at least one dose of the flu vaccine since 1998. These are all rough estimates given the limited data available; however, even if these estimates are high by a factor of 10 (highly unlikely), the signals reported below are still significant. 
+
+In Table 1 below we show the count of AE reported post vaccine in VAERS along with the mean rate of report over the time tracked, the mean rate of report per billion doses given, and the mean rate of report per billion people vaccinated. Report count and rates for the COVID-19 Vaccine are on the top line with the counts and rates for the Flu vaccine below them for each AE. The same data for global counts and rates is shown in Table 2.
 
 | Adverse Event | US Count of AE reports post Vaccine | US Rate of reported AE<br/>(count/Month) | US Rate of reported AE<br/>(count/billion doses) | US Rate of reported AE<br/>(count/billion people vaccinated) |
 | --- | --: | --: | --: | --: |
@@ -34,7 +83,6 @@ Table 1 below shows the count of AE reported post vaccine in VAERS along with th
 | Fetal abnormal surveillance | 125<br/>36 | 6.94<br/>0.122 | 210<br/>10.9 | 481<br/>92.6 |
 | Fetal placental thrombosis | 5<br/>0 | 0.278<br/>0.00 | 8.39<br/>0.00 | 19.2<br/>0.00 |
 | Fetal death (stillbirth) | 168<br/>42 | 9.33<br/>0.143 | 282<br/>12.7 | 646<br/>108 |
-
 
 *Table 1*
 
@@ -60,16 +108,18 @@ For all AE, the rates of reports post COVID-19 vaccine are higher than the Flu v
 
 *Statistical Significance*
 
-We treat each AE report as discrete independent events occurring at the mean rate specified in the tables 1 and 2 which we model as a Poisson distribution. Given two rates $r_1$ and $r_2$ over a period, $P$, we perform a Poisson E-test [reference: https://userweb.ucs.louisiana.edu/~kxk4695/JSPI-04.pdf] to compute the p-value. The E-test is used for Poisson statistics analogous to the traditional t-test used for Gaussian statistics. The p-value is interpreted in the same way: the probability that the observed events came from the same probability distribution. Or stated another way: the probability that the means (in this case rates) are same by random chance.
+We treat each AE report as discrete independent events occurring at the mean rate specified in Tables 1 and 2 which we model as a Poisson distribution. Given two rates $r_1$ and $r_2$ over a period, $P$, we perform a Poisson E-test [reference: https://userweb.ucs.louisiana.edu/~kxk4695/JSPI-04.pdf] to compute the p-value. The E-test is used for Poisson statistics analogous to the traditional t-test used for Gaussian statistics. The p-value is interpreted in the same way: the probability that the observed events came from the same probability distribution. Or stated another way: the probability that the means (in this case rates) are same by random chance.
 
-We use the rates in table 1 and 2 above and normalize the event counts over each period, $P$: the 18-month-, 12 billion-dose-, or XX billion-people-vaccinated-window and report the p-values below in Table 3. Where there is sufficient data, the p-values are small, and where 0.0 is reported, it was too small to represent as a double precision floating point number in our E-test function [reference: https://github.com/nolanbconaway/poisson-etest]. 
+We use the rates in Tables 1 and 2 above and normalize the event counts over each period, $P$: the time-, dose-, or people-vaccinated-window and report the p-values below in Table 3. Where there is sufficient data, the p-values are small, and where 0.0 is reported, it was too small to represent as a double precision floating point number in our E-test function [reference: https://github.com/nolanbconaway/poisson-etest]. 
 
 *Estimating Relative Reporting Rates* 
 
-For the rates that are statically different ($p<0.05$) and have non-zero counts in the reporting period, we compute ratio of rates of AE reports for each vaccine. That is, we compute how much more often a post COVID-19 vaccination AE is reported compared to post Flu vaccination. Consider a case were Event A is reported at a rate of 100 per month and Event B is reported at a rate of 10 per month. The naïve approach is to simply state that Event A is reported $\frac{100/month}{10/month}=10$ times as often as Event B. However, events do not occur at uniform frequency, they occur at frequencies described by the Poisson distribution. We proceed by computing the ratio distribution, $R$, which is the distribution of the ratio of two different Poisson distributions. That is, given two Poisson distributions, $Poisson(r_1)$ and $Poisson(r_2)$, we aim to compute the ratio distribution, $R$, which represents the probability distribution of the ratio of the distribution of events.
+For the rates that have non-zero counts in the reporting period, we compute ratio of rates of AE reports for each vaccine and the 95% confidence interval (We do not use the p-value as a metric here to avoid claims of p-hacking, the full confidence interval is shown and the reader can deduce significance from that). That is, we compute how much more often a post COVID-19 vaccination AE is reported compared to post Flu vaccination. Consider a case were Event A is reported at a rate of 100 per month and Event B is reported at a rate of 10 per month. The naïve approach is to simply state that Event A is reported $\frac{100/month}{10/month}=10$ times as often as Event B. However, events do not occur at uniform frequency, independent events occur at frequencies described by the Poisson distribution. We proceed by computing the ratio distribution, $R$, which is the distribution of the ratio of two different Poisson distributions. That is, given two Poisson distributions, $Poisson(r_1)$ and $Poisson(r_2)$, we aim to compute the ratio distribution, $R$, which represents the probability distribution of the ratio of the distribution of events.
+
 $$
 R(r_1,r_2)=\frac{Poisson(r_1)}{Poisson(r_2)}
 $$
+
 We estimate the shape of $R$ for each AE and period, $P$, by performing Monte Carlo simulations. We draw 1,000,000 random samples from Poisson distributions with rates $r_1$ and $r_2$ resulting in a sample of paired event counts $n_1$ and $n_2$ , respectively, over the observation window $P$ .
 
 $$
@@ -77,6 +127,7 @@ n_i \leftarrow Poisson(r_i)
 $$
 
 That is, we create a set of 1,000,000 tuples of event counts $\left\{(n_1,n_2)_1,(n_1,n_2)_2,\dots,(n_1,n_2)_{1000000}\right\}$ drawn from the two Poisson distributions. The ratio distribution, $R$, is built up from the ratio of the draws of each pair of $n_1$ and $n_2$ 
+
 $$
 R(r_1,r_2)=\left\{\left(\frac{n_1}{n_2}\right)_1,\left(\frac{n_1}{n_2}\right)_2,\dots,\left(\frac{n_1}{n_2}\right)_{1000000}\right\}
 $$
@@ -85,7 +136,7 @@ The mean of $R$ is is the expectation value for the ratio of the two Poisson dis
 
 We did these analyses using a custom-written Python script, and will make it available upon request.
 
-We report in Table 3 below the relative rate of post COVID-19 vaccine AE reports to post Flu vaccine AE report.  Global values are the top line and US values are in the bottom line for each AE.  A relative rate greater than 1 implies that there are more post COVID-19 vaccine AE reports than post Flu vaccine AE report. According to CDC’s Standard Operating Procedures for COVID-19 [reference: https://www.cdc.gov/vaccinesafety/pdf/VAERS-v2-SOP.pdf] when doing a Proportional Reporting Ratio (PRR) analysis (which is analogous to the analysis presented here in this paper), a 2x increase in reporting is a sufficient signal to be concerned.
+We report in Table 3 below the relative rate of post COVID-19 vaccine AE reports to post Flu vaccine AE report. Global values are the top line and US values are in the bottom line for each AE. A relative rate greater than 1 implies that there are more post COVID-19 vaccine AE reports than post Flu vaccine AE report. According to CDC’s Standard Operating Procedures for COVID-19 [reference: https://www.cdc.gov/vaccinesafety/pdf/VAERS-v2-SOP.pdf] when doing a Proportional Reporting Ratio (PRR) analysis (which is analogous to the analysis presented here in this paper), a 2x increase in reporting is a sufficient signal to be concerned.
 
 | Adverse Event | Relative Rate<br/>(by time) | Relative Rate<br/>(by dose) | Relative Rate<br/>(by person vaccinated) |
 | --- | --: | --: | --: |
@@ -105,8 +156,7 @@ We report in Table 3 below the relative rate of post COVID-19 vaccine AE reports
 
 *Table 3*
 
-
-In the Figures below we show the US and Global relative rates of the reports of AE after the COVID-19 vaccine versus the Flu vaccine for the rates of AE by unit time, by dose given, and by person vaccinated. A value greater than 1 implies that the AE is reported more frequently after the COVID-19 vaccine than after the Flu vaccine. Note the log scale spanning multiple orders of magnitude indicating a large effect across many different AE - all (much) greater than 1. 
+In the Figures below we show the Global and US relative rates of the reports of AE after the COVID-19 vaccine versus the Flu vaccine for the rates of AE by unit time, by dose given, and by person vaccinated. A value greater than 1 implies that the AE is reported more frequently after the COVID-19 vaccine than after the Flu vaccine. Note the log scale spanning multiple orders of magnitude indicating a large effect across many different AE - all (much) greater than 1. 
 
 ![forest-Dose (Global)](forest-Dose%20(Global).png)
 

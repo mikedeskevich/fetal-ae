@@ -80,7 +80,8 @@ def compare_rates(ae_data, cperiod, fperiod, period_label):
         table_data[ae] = {'p': re.sub('e(.+)', r'x10^\1^', '{:#.2}'.format(p))}
 
         # if it's significant, add it to our set of significant AE for plotting later
-        if p < 0.05:
+        # the "or True" is there because later we decided to report everything
+        if p < 0.05 or True:
             sig.add(ae)
 
         print('{:55s} {:.3e}'.format(ae, p))

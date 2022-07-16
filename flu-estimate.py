@@ -10,7 +10,7 @@ death_rate = {2022: 9.075, 2021: 8.977, 2020: 8.880, 2019: 8.782, 2018: 8.685, 2
 
 # https://population.un.org/
 year = 1980
-people = np.zeros(229486)  # thousands
+people = np.zeros(100000)  # thousands
 
 # CDC estimates about 1/2 of the population gets vaccinated every year
 # we just use this as our prior.  It will get iteratively updated below
@@ -22,6 +22,8 @@ people[np.where(np.random.random(np.size(people)) < 0.50)] = 1
 died_with_vax = 0
 
 # go until the end of 2021, the 2022 flu season didn't start yet
+print("|End of Year|Sample Population<br/>(Thousands)|Vaccinated Population<br/>(Thousands)|Total Vaccinated<br/>Since 1998<br/>(Thousands)|")
+print("|---| --: | --: | --: |")
 while year <= 2021:
     # make some new people to tack on at the end of the year
     new_people = np.zeros(int(np.size(people)*(birth_rate[year]/1000)))
@@ -43,11 +45,20 @@ while year <= 2021:
 
     # end-of-year summary
     population = np.size(people)
-    total_vax = int(np.count_nonzero(people)+died_with_vax)
+    living_vax= int(np.count_nonzero(people))
+    total_vax = int(living_vax+died_with_vax)
     percent_vax = total_vax/population
-    print(year, population, total_vax, '{:.2f}'.format(100*percent_vax))
+    print("| {:d} | {:d} | {:d} ({:.1f}%) | {:s} |".format(
+        year, 
+        population, 
+        living_vax,
+        100*living_vax/population,
+        '{:d} ({:.1f}%)'.format(total_vax, 100*total_vax/population) if year >=1998 else '--'
+    ))
 
     year += 1
+
+print('')
 
 # https://population.un.org/
 real_final_population = 334805  # thousands
