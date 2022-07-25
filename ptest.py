@@ -191,7 +191,7 @@ us_time = compare_rates(us_data, ctime, ftime, 'Month (US)')
 # run the stats by people
 # number of vaccinated people
 cpeople = .25996
-fpeople = .38861  # estimated
+fpeople = .313    # estimated
 us_people = compare_rates(us_data, cpeople, fpeople, 'People (US)')
 
 with open('table1.md', 'w') as md:
@@ -225,7 +225,7 @@ global_time = compare_rates(global_data, ctime, ftime, 'Month (Global)')
 # run the stats by people
 # number of vaccinated people
 cpeople = 5.23
-fpeople = 9.23  # estimated
+fpeople = 7.71 # estimated
 global_people = compare_rates(global_data, cpeople, fpeople, 'People (Global)')
 
 with open('table2.md', 'w') as md:

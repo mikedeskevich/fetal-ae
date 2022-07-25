@@ -112,23 +112,23 @@ Fetal death (stillbirth)                                   82.1521    26.5000   
 ***** People (US) *****
 [('Abnormal uterine bleeding (menstrual irregularity)', 'AUB', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 0), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal death (stillbirth)', 'FD', 168, 42)]
 cperiod= 0.25996
-cperiod= 0.38861
+cperiod= 0.313
 ******************************
 
 *** RATES ***
-Abnormal uterine bleeding (menstrual irregularity)        6352 24434.5284     54   138.9568
-Miscarriage                                               1232  4739.1906    259   666.4780
+Abnormal uterine bleeding (menstrual irregularity)        6352 24434.5284     54   172.5240
+Miscarriage                                               1232  4739.1906    259   827.4760
 Fetal chromosomal abnormalities                              7    26.9272      0     0.0000
-Fetal malformation                                           2     7.6935      1     2.5733
+Fetal malformation                                           2     7.6935      1     3.1949
 Fetal cystic hygroma                                         5    19.2337      0     0.0000
-Fetal cardiac disorders                                     10    38.4675      2     5.1465
+Fetal cardiac disorders                                     10    38.4675      2     6.3898
 Fetal arrhythmia                                             3    11.5402      0     0.0000
 Fetal cardiac arrest                                         3    11.5402      0     0.0000
 Fetal vascular mal-perfusion                                 5    19.2337      0     0.0000
-Fetal growth abnormalities                                  59   226.9580     20    51.4655
-Fetal abnormal surveillance                                125   480.8432     36    92.6379
+Fetal growth abnormalities                                  59   226.9580     20    63.8978
+Fetal abnormal surveillance                                125   480.8432     36   115.0160
 Fetal placental thrombosis                                   5    19.2337      0     0.0000
-Fetal death (stillbirth)                                   168   646.2533     42   108.0775
+Fetal death (stillbirth)                                   168   646.2533     42   134.1853
 ******************************
 
 *** P VALUES ***
@@ -141,26 +141,26 @@ Fetal cardiac disorders                                 4.682e-03
 Fetal arrhythmia                                        8.838e-02
 Fetal cardiac arrest                                    8.838e-02
 Fetal vascular mal-perfusion                            1.976e-02
-Fetal growth abnormalities                              1.675e-08
+Fetal growth abnormalities                              3.200e-07
 Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              1.976e-02
 Fetal death (stillbirth)                                0.000e+00
 ******************************
 
 *** RELATIVE RATES ***
-Abnormal uterine bleeding (menstrual irregularity)        180.9633   131.2245   255.4800
-Miscarriage                                                 7.1526     6.1040     8.4052
+Abnormal uterine bleeding (menstrual irregularity)        144.9039   108.5862   197.3942
+Miscarriage                                                 5.7544     4.9793     6.6613
 Fetal chromosomal abnormalities                             0.0000     0.0000     0.0000
-Fetal malformation                                          1.6813     0.0000     5.0000
+Fetal malformation                                          1.6113     0.0000     5.0000
 Fetal cystic hygroma                                        0.0000     0.0000     0.0000
-Fetal cardiac disorders                                     6.9717     1.6667    15.0000
+Fetal cardiac disorders                                     6.3575     1.5000    15.0000
 Fetal arrhythmia                                            0.0000     0.0000     0.0000
 Fetal cardiac arrest                                        0.0000     0.0000     0.0000
 Fetal vascular mal-perfusion                                0.0000     0.0000     0.0000
-Fetal growth abnormalities                                  4.8033     2.5789     9.1111
-Fetal abnormal surveillance                                 5.4263     3.4857     8.5714
+Fetal growth abnormalities                                  3.7993     2.1538     6.7500
+Fetal abnormal surveillance                                 4.3309     2.8889     6.5500
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
-Fetal death (stillbirth)                                    6.2095     4.1538     9.4375
+Fetal death (stillbirth)                                    4.9627     3.4348     7.2400
 ******************************
 
 ******************************
@@ -277,23 +277,23 @@ Fetal death (stillbirth)                                  135.3308    48.2500   
 ***** People (Global) *****
 [('Abnormal uterine bleeding (menstrual irregularity)', 'AUB', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal death (stillbirth)', 'FD', 402, 64)]
 cperiod= 5.23
-cperiod= 9.23
+cperiod= 7.71
 ******************************
 
 *** RATES ***
-Abnormal uterine bleeding (menstrual irregularity)       12843  2455.6405     65     7.0423
-Miscarriage                                               3338   638.2409    325    35.2113
+Abnormal uterine bleeding (menstrual irregularity)       12843  2455.6405     65     8.4306
+Miscarriage                                               3338   638.2409    325    42.1530
 Fetal chromosomal abnormalities                             10     1.9120      0     0.0000
-Fetal malformation                                          22     4.2065      2     0.2167
+Fetal malformation                                          22     4.2065      2     0.2594
 Fetal cystic hygroma                                         8     1.5296      0     0.0000
-Fetal cardiac disorders                                     18     3.4417      2     0.2167
+Fetal cardiac disorders                                     18     3.4417      2     0.2594
 Fetal arrhythmia                                             5     0.9560      0     0.0000
 Fetal cardiac arrest                                        20     3.8241      0     0.0000
 Fetal vascular mal-perfusion                                12     2.2945      0     0.0000
-Fetal growth abnormalities                                 188    35.9465     24     2.6002
-Fetal abnormal surveillance                                178    34.0344     45     4.8754
+Fetal growth abnormalities                                 188    35.9465     24     3.1128
+Fetal abnormal surveillance                                178    34.0344     45     5.8366
 Fetal placental thrombosis                                   6     1.1472      0     0.0000
-Fetal death (stillbirth)                                   402    76.8642     64     6.9339
+Fetal death (stillbirth)                                   402    76.8642     64     8.3009
 ******************************
 
 *** P VALUES ***
@@ -313,18 +313,18 @@ Fetal death (stillbirth)                                0.000e+00
 ******************************
 
 *** RELATIVE RATES ***
-Abnormal uterine bleeding (menstrual irregularity)        358.6413   261.0816   506.7602
-Miscarriage                                                18.2268    15.7302    21.1975
+Abnormal uterine bleeding (menstrual irregularity)        298.1365   223.0345   405.9688
+Miscarriage                                                15.2108    13.2857    17.4694
 Fetal chromosomal abnormalities                             0.0000     0.0000     0.0000
-Fetal malformation                                         16.2592     5.0000    30.0000
+Fetal malformation                                         15.2630     4.5000    30.0000
 Fetal cystic hygroma                                        0.0000     0.0000     0.0000
-Fetal cardiac disorders                                    13.2949     4.0000    25.0000
+Fetal cardiac disorders                                    12.4868     3.6000    25.0000
 Fetal arrhythmia                                            0.0000     0.0000     0.0000
 Fetal cardiac arrest                                        0.0000     0.0000     0.0000
 Fetal vascular mal-perfusion                                0.0000     0.0000     0.0000
-Fetal growth abnormalities                                 15.0360     8.6000    27.6250
-Fetal abnormal surveillance                                 7.2770     4.7895    11.2667
+Fetal growth abnormalities                                 12.3590     7.4167    21.4444
+Fetal abnormal surveillance                                 6.0354     4.1000     9.0000
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
-Fetal death (stillbirth)                                   11.4116     8.1364    16.2917
+Fetal death (stillbirth)                                    9.4869     6.9464    13.1290
 ******************************
 
