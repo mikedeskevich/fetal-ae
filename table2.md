@@ -1,6 +1,6 @@
 | Adverse Event | Global Count of AE reports post Vaccine | Global Rate of reported AE<br/>(count/Month) | Global Rate of reported AE<br/>(count/billion doses) | Global Rate of reported AE<br/>(count/billion people vaccinated) |
 | --- | --: | --: | --: | --: |
-| Abnormal uterine bleeding (menstrual irregularity) | 12843<br/>65 | 714<br/>0.221 | 1060<br/>0.985 | 2460<br/>8.43 |
+| Menstrual abnormality | 12843<br/>65 | 714<br/>0.221 | 1060<br/>0.985 | 2460<br/>8.43 |
 | Miscarriage | 3338<br/>325 | 185<br/>1.11 | 277<br/>4.92 | 638<br/>42.2 |
 | Fetal chromosomal abnormalities | 10<br/>0 | 0.556<br/>0.00 | 0.829<br/>0.00 | 1.91<br/>0.00 |
 | Fetal malformation | 22<br/>2 | 1.22<br/>0.00680 | 1.82<br/>0.0303 | 4.21<br/>0.259 |
@@ -12,4 +12,5 @@
 | Fetal growth abnormalities | 188<br/>24 | 10.4<br/>0.0816 | 15.6<br/>0.364 | 35.9<br/>3.11 |
 | Fetal abnormal surveillance | 178<br/>45 | 9.89<br/>0.153 | 14.7<br/>0.682 | 34.0<br/>5.84 |
 | Fetal placental thrombosis | 6<br/>0 | 0.333<br/>0.00 | 0.497<br/>0.00 | 1.15<br/>0.00 |
-| Fetal death (stillbirth) | 402<br/>64 | 22.3<br/>0.218 | 33.3<br/>0.970 | 76.9<br/>8.30 |
+| Fetal stillbirth | 402<br/>64 | 22.3<br/>0.218 | 33.3<br/>0.970 | 76.9<br/>8.30 |
+| Low amniotic fluid | 17<br/>1 | 0.944<br/>0.00340 | 1.41<br/>0.0152 | 3.25<br/>0.130 |

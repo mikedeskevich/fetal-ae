@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 # US counts from VARES
 # (ae label, ae abbreviation, COVID count, flu count)
 us_data = [
-    ('Abnormal uterine bleeding (menstrual irregularity)', 'AUB', 6352, 54),
+    ('Menstrual abnormality', 'MA', 6352, 54),
     ('Miscarriage', 'M', 1232, 259),
     ('Fetal chromosomal abnormalities', 'FCM', 7, 0),
     ('Fetal malformation', 'FM', 2, 1),
@@ -34,13 +34,14 @@ us_data = [
     ('Fetal growth abnormalities', 'FGA', 59, 20),
     ('Fetal abnormal surveillance', 'FAS', 125, 36),
     ('Fetal placental thrombosis', 'FPT', 5, 0),
-    ('Fetal death (stillbirth)', 'FD', 168, 42)
+    ('Fetal stillbirth', 'FS', 168, 42),
+    ('Low amniotic fluid', 'LAF', 11, 1)
 ]
 
 # global counts from VARES
 # (ae label, ae abbreviation, COVID count, flu count)
 global_data = [
-    ('Abnormal uterine bleeding (menstrual irregularity)', 'AUB', 12843, 65),
+    ('Menstrual abnormality', 'MA', 12843, 65),
     ('Miscarriage', 'M', 3338, 325),
     ('Fetal chromosomal abnormalities', 'FCM', 10, 0),
     ('Fetal malformation', 'FM', 22, 2),
@@ -52,7 +53,8 @@ global_data = [
     ('Fetal growth abnormalities', 'FGA', 188, 24),
     ('Fetal abnormal surveillance', 'FAS', 178, 45),
     ('Fetal placental thrombosis', 'FPT', 6, 0),
-    ('Fetal death (stillbirth)', 'FD', 402, 64)
+    ('Fetal stillbirth', 'FS', 402, 64),
+    ('Low amniotic fluid', 'LAF', 17, 1)
 ]
 
 
