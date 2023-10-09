@@ -1,6 +1,6 @@
 ******************************
 ***** Dose (US) *****
-[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 0), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1)]
+[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 5), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1), ('Preeclampsia', 'PRE', 106, 22), ('Premature Delivery', 'PD', 141, 168), ('PPROM', 'PPROM', 17, 7), ('Premature Baby Death', 'PBD', 3, 0)]
 cperiod= 0.59623
 cperiod= 3.3
 ******************************
@@ -13,13 +13,17 @@ Fetal malformation                                           2     3.3544      1
 Fetal cystic hygroma                                         5     8.3860      0     0.0000
 Fetal cardiac disorders                                     10    16.7721      2     0.6061
 Fetal arrhythmia                                             3     5.0316      0     0.0000
-Fetal cardiac arrest                                         3     5.0316      0     0.0000
+Fetal cardiac arrest                                         3     5.0316      5     1.5152
 Fetal vascular mal-perfusion                                 5     8.3860      0     0.0000
 Fetal growth abnormalities                                  59    98.9551     20     6.0606
 Fetal abnormal surveillance                                125   209.6506     36    10.9091
 Fetal placental thrombosis                                   5     8.3860      0     0.0000
 Fetal stillbirth                                           168   281.7705     42    12.7273
 Low amniotic fluid                                          11    18.4493      1     0.3030
+Preeclampsia                                               106   177.7837     22     6.6667
+Premature Delivery                                         141   236.4859    168    50.9091
+PPROM                                                       17    28.5125      7     2.1212
+Premature Baby Death                                         3     5.0316      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -37,6 +41,10 @@ Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              1.976e-02
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      2.912e-04
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      0.000e+00
+PPROM                                                   5.274e-05
+Premature Baby Death                                    8.838e-02
 ******************************
 
 *** RELATIVE RATES ***
@@ -47,18 +55,22 @@ Fetal malformation                                          1.9072     0.0000   
 Fetal cystic hygroma                                        0.0000     0.0000     0.0000
 Fetal cardiac disorders                                     9.1187     3.0000    16.0000
 Fetal arrhythmia                                            0.0000     0.0000     0.0000
-Fetal cardiac arrest                                        0.0000     0.0000     0.0000
+Fetal cardiac arrest                                        2.3592     0.0000     6.0000
 Fetal vascular mal-perfusion                                0.0000     0.0000     0.0000
-Fetal growth abnormalities                                 21.5757     7.1429    64.0000
-Fetal abnormal surveillance                                23.5755    10.1111    63.0000
+Fetal growth abnormalities                                 21.5680     7.1429    64.0000
+Fetal abnormal surveillance                                23.5652    10.1000    63.0000
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
-Fetal stillbirth                                           26.2801    12.2000    60.0000
-Low amniotic fluid                                         10.5017     4.0000    18.0000
+Fetal stillbirth                                           26.2966    12.2143    60.0000
+Low amniotic fluid                                         10.5008     4.0000    18.0000
+Preeclampsia                                               35.1392    12.2857   110.0000
+Premature Delivery                                          4.8087     3.2308     7.2174
+PPROM                                                      12.1066     3.5000    24.0000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 
 ******************************
 ***** Month (US) *****
-[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 0), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1)]
+[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 5), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1), ('Preeclampsia', 'PRE', 106, 22), ('Premature Delivery', 'PD', 141, 168), ('PPROM', 'PPROM', 17, 7), ('Premature Baby Death', 'PBD', 3, 0)]
 cperiod= 18
 cperiod= 294
 ******************************
@@ -71,13 +83,17 @@ Fetal malformation                                           2     0.1111      1
 Fetal cystic hygroma                                         5     0.2778      0     0.0000
 Fetal cardiac disorders                                     10     0.5556      2     0.0068
 Fetal arrhythmia                                             3     0.1667      0     0.0000
-Fetal cardiac arrest                                         3     0.1667      0     0.0000
+Fetal cardiac arrest                                         3     0.1667      5     0.0170
 Fetal vascular mal-perfusion                                 5     0.2778      0     0.0000
 Fetal growth abnormalities                                  59     3.2778     20     0.0680
 Fetal abnormal surveillance                                125     6.9444     36     0.1224
 Fetal placental thrombosis                                   5     0.2778      0     0.0000
 Fetal stillbirth                                           168     9.3333     42     0.1429
 Low amniotic fluid                                          11     0.6111      1     0.0034
+Preeclampsia                                               106     5.8889     22     0.0748
+Premature Delivery                                         141     7.8333    168     0.5714
+PPROM                                                       17     0.9444      7     0.0238
+Premature Baby Death                                         3     0.1667      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -95,6 +111,10 @@ Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              1.976e-02
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      2.912e-04
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      0.000e+00
+PPROM                                                   5.116e-06
+Premature Baby Death                                    8.838e-02
 ******************************
 
 *** RELATIVE RATES ***
@@ -105,18 +125,22 @@ Fetal malformation                                          1.9811     0.0000   
 Fetal cystic hygroma                                        0.0000     0.0000     0.0000
 Fetal cardiac disorders                                     9.6984     4.0000    17.0000
 Fetal arrhythmia                                            0.0000     0.0000     0.0000
-Fetal cardiac arrest                                        0.0000     0.0000     0.0000
+Fetal cardiac arrest                                        2.7711     0.0000     7.0000
 Fetal vascular mal-perfusion                                0.0000     0.0000     0.0000
-Fetal growth abnormalities                                 42.5020    14.0000    72.0000
-Fetal abnormal surveillance                                67.9890    21.6000   140.0000
+Fetal growth abnormalities                                 42.5382    14.0000    72.0000
+Fetal abnormal surveillance                                67.9740    21.6000   140.0000
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
-Fetal stillbirth                                           82.1521    26.5000   184.0000
-Low amniotic fluid                                         10.8608     5.0000    18.0000
+Fetal stillbirth                                           82.1065    26.5000   183.0000
+Low amniotic fluid                                         10.8177     4.5000    18.0000
+Preeclampsia                                               73.7799    24.2500   123.0000
+Premature Delivery                                         15.4301     8.0000    31.6000
+PPROM                                                      15.2339     5.5000    25.0000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 
 ******************************
 ***** People (US) *****
-[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 0), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1)]
+[('Menstrual abnormality', 'MA', 6352, 54), ('Miscarriage', 'M', 1232, 259), ('Fetal chromosomal abnormalities', 'FCM', 7, 0), ('Fetal malformation', 'FM', 2, 1), ('Fetal cystic hygroma', 'FCM', 5, 0), ('Fetal cardiac disorders', 'FCD', 10, 2), ('Fetal arrhythmia', 'FA', 3, 0), ('Fetal cardiac arrest', 'FCA', 3, 5), ('Fetal vascular mal-perfusion', 'FVMP', 5, 0), ('Fetal growth abnormalities', 'FGA', 59, 20), ('Fetal abnormal surveillance', 'FAS', 125, 36), ('Fetal placental thrombosis', 'FPT', 5, 0), ('Fetal stillbirth', 'FS', 168, 42), ('Low amniotic fluid', 'LAF', 11, 1), ('Preeclampsia', 'PRE', 106, 22), ('Premature Delivery', 'PD', 141, 168), ('PPROM', 'PPROM', 17, 7), ('Premature Baby Death', 'PBD', 3, 0)]
 cperiod= 0.25996
 cperiod= 0.313
 ******************************
@@ -129,13 +153,17 @@ Fetal malformation                                           2     7.6935      1
 Fetal cystic hygroma                                         5    19.2337      0     0.0000
 Fetal cardiac disorders                                     10    38.4675      2     6.3898
 Fetal arrhythmia                                             3    11.5402      0     0.0000
-Fetal cardiac arrest                                         3    11.5402      0     0.0000
+Fetal cardiac arrest                                         3    11.5402      5    15.9744
 Fetal vascular mal-perfusion                                 5    19.2337      0     0.0000
 Fetal growth abnormalities                                  59   226.9580     20    63.8978
 Fetal abnormal surveillance                                125   480.8432     36   115.0160
 Fetal placental thrombosis                                   5    19.2337      0     0.0000
 Fetal stillbirth                                           168   646.2533     42   134.1853
 Low amniotic fluid                                          11    42.3142      1     3.1949
+Preeclampsia                                               106   407.7550     22    70.2875
+Premature Delivery                                         141   542.3911    168   536.7412
+PPROM                                                       17    65.3947      7    22.3642
+Premature Baby Death                                         3    11.5402      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -146,13 +174,17 @@ Fetal malformation                                      1.973e-01
 Fetal cystic hygroma                                    1.976e-02
 Fetal cardiac disorders                                 4.682e-03
 Fetal arrhythmia                                        8.838e-02
-Fetal cardiac arrest                                    8.838e-02
+Fetal cardiac arrest                                    7.685e-01
 Fetal vascular mal-perfusion                            1.976e-02
 Fetal growth abnormalities                              3.200e-07
 Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              1.976e-02
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      2.912e-04
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      9.067e-01
+PPROM                                                   9.510e-03
+Premature Baby Death                                    8.838e-02
 ******************************
 
 *** RELATIVE RATES ***
@@ -163,18 +195,22 @@ Fetal malformation                                          1.6113     0.0000   
 Fetal cystic hygroma                                        0.0000     0.0000     0.0000
 Fetal cardiac disorders                                     6.3575     1.5000    15.0000
 Fetal arrhythmia                                            0.0000     0.0000     0.0000
-Fetal cardiac arrest                                        0.0000     0.0000     0.0000
+Fetal cardiac arrest                                        0.9500     0.0000     3.5000
 Fetal vascular mal-perfusion                                0.0000     0.0000     0.0000
-Fetal growth abnormalities                                  3.7993     2.1538     6.7500
-Fetal abnormal surveillance                                 4.3309     2.8889     6.5500
+Fetal growth abnormalities                                  3.7983     2.1538     6.7273
+Fetal abnormal surveillance                                 4.3325     2.8889     6.5500
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
-Fetal stillbirth                                            4.9627     3.4348     7.2400
-Low amniotic fluid                                          8.8405     2.5000    17.0000
+Fetal stillbirth                                            4.9619     3.4348     7.2308
+Low amniotic fluid                                          8.8430     2.5000    17.0000
+Preeclampsia                                                6.1590     3.7143    10.4545
+Premature Delivery                                          1.0177     0.7987     1.2787
+PPROM                                                       3.6689     1.2222    10.5000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 
 ******************************
 ***** Dose (Global) *****
-[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1)]
+[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1), ('Preeclampsia', 'PRE', 133, 28), ('Premature Delivery', 'PD', 384, 212), ('PPROM', 'PPROM', 45, 9), ('Premature Baby Death', 'PBD', 10, 0)]
 cperiod= 12.07
 cperiod= 66
 ******************************
@@ -194,6 +230,10 @@ Fetal abnormal surveillance                                178    14.7473     45
 Fetal placental thrombosis                                   6     0.4971      0     0.0000
 Fetal stillbirth                                           402    33.3057     64     0.9697
 Low amniotic fluid                                          17     1.4085      1     0.0152
+Preeclampsia                                               133    11.0191     28     0.4242
+Premature Delivery                                         384    31.8144    212     3.2121
+PPROM                                                       45     3.7283      9     0.1364
+Premature Baby Death                                        10     0.8285      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -211,6 +251,10 @@ Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              9.631e-03
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      5.116e-06
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      0.000e+00
+PPROM                                                   7.727e-14
+Premature Baby Death                                    5.781e-04
 ******************************
 
 *** RELATIVE RATES ***
@@ -228,11 +272,15 @@ Fetal abnormal surveillance                                25.2665    12.1538   
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
 Fetal stillbirth                                           37.9790    21.0526    73.0000
 Low amniotic fluid                                         16.2270     7.0000    25.0000
+Preeclampsia                                               33.3645    12.9091   123.0000
+Premature Delivery                                         10.1764     7.3200    14.3846
+PPROM                                                      28.7531     9.0000    55.0000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 
 ******************************
 ***** Month (Global) *****
-[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1)]
+[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1), ('Preeclampsia', 'PRE', 133, 28), ('Premature Delivery', 'PD', 384, 212), ('PPROM', 'PPROM', 45, 9), ('Premature Baby Death', 'PBD', 10, 0)]
 cperiod= 18
 cperiod= 294
 ******************************
@@ -252,6 +300,10 @@ Fetal abnormal surveillance                                178     9.8889     45
 Fetal placental thrombosis                                   6     0.3333      0     0.0000
 Fetal stillbirth                                           402    22.3333     64     0.2177
 Low amniotic fluid                                          17     0.9444      1     0.0034
+Preeclampsia                                               133     7.3889     28     0.0952
+Premature Delivery                                         384    21.3333    212     0.7211
+PPROM                                                       45     2.5000      9     0.0306
+Premature Baby Death                                        10     0.5556      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -269,6 +321,10 @@ Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              9.631e-03
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      5.116e-06
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      0.000e+00
+PPROM                                                   0.000e+00
+Premature Baby Death                                    5.781e-04
 ******************************
 
 *** RELATIVE RATES ***
@@ -286,11 +342,15 @@ Fetal abnormal surveillance                                82.6192    26.8571   
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
 Fetal stillbirth                                          135.3308    48.2500   412.0000
 Low amniotic fluid                                         16.7655     8.0000    25.0000
+Preeclampsia                                               83.2495    26.6000   151.0000
+Premature Delivery                                         32.3275    18.5000    60.2857
+PPROM                                                      39.0106    14.6667    58.0000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 
 ******************************
 ***** People (Global) *****
-[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1)]
+[('Menstrual abnormality', 'MA', 12843, 65), ('Miscarriage', 'M', 3338, 325), ('Fetal chromosomal abnormalities', 'FCM', 10, 0), ('Fetal malformation', 'FM', 22, 2), ('Fetal cystic hygroma', 'FCM', 8, 0), ('Fetal cardiac disorders', 'FCD', 18, 2), ('Fetal arrhythmia', 'FA', 5, 0), ('Fetal cardiac arrest', 'FCA', 20, 0), ('Fetal vascular mal-perfusion', 'FVMP', 12, 0), ('Fetal growth abnormalities', 'FGA', 188, 24), ('Fetal abnormal surveillance', 'FAS', 178, 45), ('Fetal placental thrombosis', 'FPT', 6, 0), ('Fetal stillbirth', 'FS', 402, 64), ('Low amniotic fluid', 'LAF', 17, 1), ('Preeclampsia', 'PRE', 133, 28), ('Premature Delivery', 'PD', 384, 212), ('PPROM', 'PPROM', 45, 9), ('Premature Baby Death', 'PBD', 10, 0)]
 cperiod= 5.23
 cperiod= 7.71
 ******************************
@@ -310,6 +370,10 @@ Fetal abnormal surveillance                                178    34.0344     45
 Fetal placental thrombosis                                   6     1.1472      0     0.0000
 Fetal stillbirth                                           402    76.8642     64     8.3009
 Low amniotic fluid                                          17     3.2505      1     0.1297
+Preeclampsia                                               133    25.4302     28     3.6316
+Premature Delivery                                         384    73.4226    212    27.4968
+PPROM                                                       45     8.6042      9     1.1673
+Premature Baby Death                                        10     1.9120      0     0.0000
 ******************************
 
 *** P VALUES ***
@@ -327,6 +391,10 @@ Fetal abnormal surveillance                             0.000e+00
 Fetal placental thrombosis                              9.631e-03
 Fetal stillbirth                                        0.000e+00
 Low amniotic fluid                                      5.116e-06
+Preeclampsia                                            0.000e+00
+Premature Delivery                                      0.000e+00
+PPROM                                                   6.984e-09
+Premature Baby Death                                    5.781e-04
 ******************************
 
 *** RELATIVE RATES ***
@@ -344,5 +412,9 @@ Fetal abnormal surveillance                                 6.0354     4.1000   
 Fetal placental thrombosis                                  0.0000     0.0000     0.0000
 Fetal stillbirth                                            9.4869     6.9464    13.1290
 Low amniotic fluid                                         14.2439     4.6667    25.0000
+Preeclampsia                                                7.4165     4.5556    12.3636
+Premature Delivery                                          2.6890     2.2162     3.2598
+PPROM                                                       9.1426     3.6154    24.5000
+Premature Baby Death                                        0.0000     0.0000     0.0000
 ******************************
 

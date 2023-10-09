@@ -7,10 +7,14 @@
 | Fetal cystic hygroma | 5<br/>0 | 0.278<br/>0.00 | 8.39<br/>0.00 | 19.2<br/>0.00 |
 | Fetal cardiac disorders | 10<br/>2 | 0.556<br/>0.00680 | 16.8<br/>0.606 | 38.5<br/>6.39 |
 | Fetal arrhythmia | 3<br/>0 | 0.167<br/>0.00 | 5.03<br/>0.00 | 11.5<br/>0.00 |
-| Fetal cardiac arrest | 3<br/>0 | 0.167<br/>0.00 | 5.03<br/>0.00 | 11.5<br/>0.00 |
+| Fetal cardiac arrest | 3<br/>5 | 0.167<br/>0.0170 | 5.03<br/>1.52 | 11.5<br/>16.0 |
 | Fetal vascular mal-perfusion | 5<br/>0 | 0.278<br/>0.00 | 8.39<br/>0.00 | 19.2<br/>0.00 |
 | Fetal growth abnormalities | 59<br/>20 | 3.28<br/>0.0680 | 99.0<br/>6.06 | 227<br/>63.9 |
 | Fetal abnormal surveillance | 125<br/>36 | 6.94<br/>0.122 | 210<br/>10.9 | 481<br/>115 |
 | Fetal placental thrombosis | 5<br/>0 | 0.278<br/>0.00 | 8.39<br/>0.00 | 19.2<br/>0.00 |
 | Fetal stillbirth | 168<br/>42 | 9.33<br/>0.143 | 282<br/>12.7 | 646<br/>134 |
 | Low amniotic fluid | 11<br/>1 | 0.611<br/>0.00340 | 18.4<br/>0.303 | 42.3<br/>3.19 |
+| Preeclampsia | 106<br/>22 | 5.89<br/>0.0748 | 178<br/>6.67 | 408<br/>70.3 |
+| Premature Delivery | 141<br/>168 | 7.83<br/>0.571 | 236<br/>50.9 | 542<br/>537 |
+| PPROM | 17<br/>7 | 0.944<br/>0.0238 | 28.5<br/>2.12 | 65.4<br/>22.4 |
+| Premature Baby Death | 3<br/>0 | 0.167<br/>0.00 | 5.03<br/>0.00 | 11.5<br/>0.00 |

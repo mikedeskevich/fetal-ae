@@ -29,13 +29,17 @@ us_data = [
     ('Fetal cystic hygroma', 'FCM', 5, 0),
     ('Fetal cardiac disorders', 'FCD', 10, 2),
     ('Fetal arrhythmia', 'FA', 3, 0),
-    ('Fetal cardiac arrest', 'FCA', 3, 0),
+    ('Fetal cardiac arrest', 'FCA', 3, 5),
     ('Fetal vascular mal-perfusion', 'FVMP', 5, 0),
     ('Fetal growth abnormalities', 'FGA', 59, 20),
     ('Fetal abnormal surveillance', 'FAS', 125, 36),
     ('Fetal placental thrombosis', 'FPT', 5, 0),
     ('Fetal stillbirth', 'FS', 168, 42),
-    ('Low amniotic fluid', 'LAF', 11, 1)
+    ('Low amniotic fluid', 'LAF', 11, 1),
+    ('Preeclampsia','PRE',106,22),
+    ('Premature Delivery','PD',141,168),
+    ('PPROM','PPROM',17,7),
+    ('Premature Baby Death','PBD',3,0)
 ]
 
 # global counts from VARES
@@ -54,7 +58,11 @@ global_data = [
     ('Fetal abnormal surveillance', 'FAS', 178, 45),
     ('Fetal placental thrombosis', 'FPT', 6, 0),
     ('Fetal stillbirth', 'FS', 402, 64),
-    ('Low amniotic fluid', 'LAF', 17, 1)
+    ('Low amniotic fluid', 'LAF', 17, 1),
+    ('Preeclampsia','PRE',133,28),
+    ('Premature Delivery','PD',384,212),
+    ('PPROM','PPROM',45,9),
+    ('Premature Baby Death','PBD',10,0)
 ]
 
 
@@ -129,6 +137,7 @@ def compare_rates(ae_data, cperiod, fperiod, period_label):
             smean = '{:.0f}'.format(mean)
             slow = round(low, sigfigs=len(smean)+1, output_type=str)
             shi = round(hi, sigfigs=len(smean)+1, output_type=str)
+            smean = round(mean, sigfigs=len(smean)+1, output_type=str)
             table_data[ae]['rr'] = '{:s} [{:s}-{:s}]'.format(smean, slow, shi)
             labs.append(abb)
             measure.append(smean)
@@ -158,7 +167,7 @@ def compare_rates(ae_data, cperiod, fperiod, period_label):
     p = EffectMeasurePlot(label=labs, effect_measure=measure, lcl=lower, ucl=upper)
     p.labels(effectmeasure='RR', scale='log')
     p.colors(pointshape="D")
-    ax = p.plot(figsize=(8, 4), t_adjuster=0.06, max_value=15000, min_value=0.5)
+    ax = p.plot(figsize=(9, 5), t_adjuster=0.06, max_value=15000, min_value=0.5)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
     ax.spines['bottom'].set_visible(True)
